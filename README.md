@@ -2,7 +2,7 @@
 throner
 -------
 
-The goal of throner is to ...
+Throner is an R API wrapper for throne.ai sports prediction contests.
 
 ### Installation
 

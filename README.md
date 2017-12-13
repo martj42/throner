@@ -2,6 +2,8 @@
 throner
 -------
 
+[![Travis-CI Build Status](https://travis-ci.org/martj42/throner.svg?branch=master)](https://travis-ci.org/martj42/throner)
+
 Throner is an R API wrapper for Throne.ai sports prediction contests.
 
 ### Installation

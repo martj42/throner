@@ -13,3 +13,4 @@ URL: http://github.com/martj42/throner
 BugReports: http://github.com/martj42/throner/issues
 Depends: httr
 Imports: jsonlite
+RoxygenNote: 6.0.1

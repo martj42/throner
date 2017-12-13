@@ -1,11 +1,11 @@
 Package: throner
 Type: Package
-Title: R wrapper for throne.ai API
+Title: R wrapper for Throne.ai API
 Version: 0.1.0
 Date: 2017-13-12
 Authors@R: person("Mart", "Jürisoo", email = "mart.jyrisoo@gmail.com",
   role = c("aut", "cre"))
-Description: An R API wrapper for throne.ai sports prediction contests. It allows for easy access to your throne.ai data as well as provides access to past sports data for modelling purposes and allows submitting predictions for future events.
+Description: An R API wrapper for Throne.ai sports prediction contests. It allows for easy access to your throne.ai data as well as provides access to past sports data for modelling purposes and allows submitting predictions for future events.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

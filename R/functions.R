@@ -15,7 +15,7 @@ get_results <- function(competition) {
     GET("http://throne.ai/api/competition/data/historical/", add_headers(.headers = c(key,
         comp)), write_disk(tmp), progress())
     file_name <- as.character(unzip(tmp, list = TRUE)$Name)
-    data <- read.table(unz(tmp, file_name), header = T, sep = ",", stringsAsFactors = F)
+    data <- read.table(unz(tmp, file_name), header = T, sep = ",")
     unlink(tmp)
     return(data)
 }
@@ -26,7 +26,7 @@ get_fixtures <- function(competition) {
     GET("http://throne.ai/api/competition/data/upcoming/", add_headers(.headers = c(key,
         comp)), write_disk(tmp))
     file_name <- as.character(unzip(tmp, list = TRUE)$Name)
-    data <- read.table(unz(tmp, file_name), header = T, sep = ",", stringsAsFactors = F)
+    data <- read.table(unz(tmp, file_name), header = T, sep = ",")
     unlink(tmp)
     return(data)
 }

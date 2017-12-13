@@ -27,7 +27,6 @@ devtools::install_github("martj42/throner")
 ### Usage
 
 ```{r usage}
-``` r
 library(throner)
 ```
 

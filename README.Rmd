@@ -20,13 +20,13 @@ The goal of throner is to ...
 
 ### Installation
 
-```{r installation}
+```{r installation, eval=FALSE}
 devtools::install_github("martj42/throner")
 ```
 
 ### Usage
 
-```{r usage, results='hide'}
+```{r usage, eval=FALSE}
 library(throner)
 ```
 

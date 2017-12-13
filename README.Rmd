@@ -14,14 +14,27 @@ knitr::opts_chunk$set(
 )
 ```
 
-# throner
+## throner
 
 The goal of throner is to ...
 
-## Example
+### Installation
 
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
-## basic example code
+```{r installation}
+devtools::install_github("martj42/throner")
 ```
+
+### Usage
+
+```{r usage}
+``` r
+library(throner)
+```
+
+The following functions are implemented:
+
+-   `auth` : initialize necessary environment variables
+-   `get_results` : receive results for selected competition
+-   `get_fixtures` : receive fixtures available for prediction for selected competition
+-   `submit_predictions` : submit your predictions for selected competition
+-   `get_xp` : get your xp balance

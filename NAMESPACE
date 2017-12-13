@@ -1,0 +1,3 @@
+exportPattern("^[[:alpha:]]+")
+import(httr)
+importFrom("utils", "read.csv", "read.table", "unzip")

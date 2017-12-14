@@ -18,7 +18,6 @@ knitr::opts_chunk$set(
 
 [![Travis-CI Build Status](https://travis-ci.org/martj42/throner.svg?branch=master)](https://travis-ci.org/martj42/throner)
 
-
 Throner is an R API wrapper for Throne.ai sports prediction contests.
 
 ### Installation
@@ -49,6 +48,8 @@ epl_fixtures <- get_fixtures("English Premier League")
 epl_predictions <- your_awesome_model(epl_fixtures)
 
 submit_predictions(epl_predictions, "English Premier League")
+
+get_xp()
 ```
 
 

@@ -34,6 +34,8 @@ epl_fixtures <- get_fixtures("English Premier League")
 epl_predictions <- your_awesome_model(epl_fixtures)
 
 submit_predictions(epl_predictions, "English Premier League")
+
+get_xp()
 ```
 
 Please note that due to throttling limits you should SAVE your historical and competition data rather than reloading from Throne servers each time you run a script or a notebook.

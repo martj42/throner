@@ -9,6 +9,11 @@ get_xp <- function() {
   jsonlite::fromJSON(rawToChar(resp$content))$result$xp
 }
 
+get_competitions <- function() {
+  resp <- httr::GET("http://throne.ai/api/competition/data/names", httr::add_headers(.headers = key))
+  jsonlite::fromJSON(rawToChar(resp$content))$result
+}
+
 get_results <- function(competition) {
   comp <- c(`X-COMPETITION-NAME` = competition)
   tmp <- tempfile()
@@ -20,6 +25,39 @@ get_results <- function(competition) {
   data <- read.csv(unz(tmp, file_name), stringsAsFactors = F)
   unlink(tmp)
   return(data)
+}
+
+get_stats <- function(competition) {
+  comp <- c(`X-COMPETITION-NAME` = competition)
+  tmp <- tempfile()
+  httr::GET("http://throne.ai/api/competition/data/gamestatistics/",
+            httr::add_headers(.headers = c(key, comp)),
+            httr::write_disk(tmp),
+            httr::progress())
+  file_name <- as.character(unzip(tmp, list = TRUE)$Name)
+  data <- read.csv(unz(tmp, file_name), stringsAsFactors = F)
+  unlink(tmp)
+  return(data)
+}
+
+get_lineups <- function(competition) {
+  comp <- c(`X-COMPETITION-NAME` = competition)
+  tmp <- tempfile()
+  httr::GET("http://throne.ai/api/competition/data/lineups/",
+            httr::add_headers(.headers = c(key, comp)),
+            httr::write_disk(tmp),
+            httr::progress())
+  file_name <- as.character(unzip(tmp, list = TRUE)$Name)
+  data <- read.csv(unz(tmp, file_name), stringsAsFactors = F)
+  unlink(tmp)
+  return(data)
+}
+
+get_players <- function(competition) {
+  comp <- c(`X-COMPETITION-NAME` = competition)
+  resp <- httr::GET("http://throne.ai/api/competition/data/players/",
+                    httr::add_headers(.headers = c(key, comp)))
+  data <- jsonlite::fromJSON(rawToChar(resp$content))$result
 }
 
 get_fixtures <- function(competition) {
